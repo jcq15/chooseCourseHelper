@@ -13,15 +13,15 @@ def getDFFromFile(fname):
     return df
 
 # first page
-getDFFromFile('page1.html').iloc[:-1,:]\
+getDFFromFile('pages/page1.html').iloc[:-1,:]\
 .to_csv('courses.csv', header=False, index=False)
 
 # other pages
 pages = 2
 try:
     while True:
-        getDFFromFile('page%s.html'%pages).iloc[2:-1,:]\
-        .to_csv('courses.csv', header=False, index=False, mode='a')
+        getDFFromFile('pages/page%s.html'%pages).iloc[2:-1,:]\
+        .to_csv('output/courses.csv', header=False, index=False, mode='a')
         print('%ssucceed!'%pages)
         pages = pages + 1
 except FileNotFoundError as e:

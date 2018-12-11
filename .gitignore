@@ -1,6 +1,7 @@
-/__pychache__
-*.html
-*.csv
+__pychache__/
+pages/
+output/
 mytoken.py
 *.log
+.*
 
